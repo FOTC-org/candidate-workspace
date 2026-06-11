@@ -1,0 +1,21 @@
+{
+    "name": "userhub",
+    "private": true,
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+        "dev:api": "pnpm --filter api start:dev",
+        "dev:web": "pnpm --filter web dev",
+        "dev:mock": "pnpm --filter mock-analytics start:dev",
+        "build": "pnpm -r build",
+        "test": "pnpm -r test",
+        "lint": "pnpm -r lint"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3"
+    },
+    "pnpm": {
+        "overrides": {
+            "postcss": "^8.5.10"
+        }
+    }
+}
