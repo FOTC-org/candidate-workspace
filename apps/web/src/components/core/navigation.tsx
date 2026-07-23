@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export function Navigation(): React.JSX.Element {
@@ -28,19 +29,31 @@ export function Navigation(): React.JSX.Element {
       <div className="container mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <span className="text-lg font-bold text-gray-900">UserHub</span>
         <div className="flex items-center gap-4">
-          <a
+          <Link
             href="/profile"
             className="text-sm font-medium text-gray-600 hover:text-gray-900"
           >
             Profile
-          </a>
+          </Link>
+          <Link
+            href="/analytics"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900"
+          >
+            Analytics
+          </Link>
+          <Link
+            href="/reports"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900"
+          >
+            Reports
+          </Link>
           {role === "ADMIN" && (
-            <a
+            <Link
               href="/users"
               className="text-sm font-medium text-gray-600 hover:text-gray-900"
             >
               Users
-            </a>
+            </Link>
           )}
           <button
             onClick={handleLogout}

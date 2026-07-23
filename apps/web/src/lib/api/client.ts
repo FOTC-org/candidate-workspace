@@ -1,4 +1,12 @@
-import type { AuthTokensDto, UserDto, PaginatedUsersDto } from "@/types";
+import type {
+  AuthTokensDto,
+  UserDto,
+  PaginatedUsersDto,
+  AnalysisDto,
+  PaginatedAnalysesDto,
+  ReportDto,
+  PaginatedReportsDto,
+} from "@/types";
 
 // Calls Next.js Route Handlers (/api/*) — safe to use in Client Components.
 // The Route Handlers proxy requests to the backend server-side.
@@ -69,6 +77,62 @@ export async function deactivateUserApi(
   return clientFetch<UserDto>(
     `/api/users/${id}`,
     { method: "DELETE" },
+    accessToken,
+  );
+}
+
+export async function analyzeApi(
+  accessToken: string,
+  userId: string,
+  text: string,
+): Promise<AnalysisDto> {
+  return clientFetch<AnalysisDto>(
+    "/api/analytics/analyze",
+    { method: "POST", body: JSON.stringify({ userId, text }) },
+    accessToken,
+  );
+}
+
+export async function getAnalysisHistoryApi(
+  accessToken: string,
+  userId: string,
+  page = 1,
+  limit = 20,
+): Promise<PaginatedAnalysesDto> {
+  return clientFetch<PaginatedAnalysesDto>(
+    `/api/analytics/users/${userId}?page=${page}&limit=${limit}`,
+    {},
+    accessToken,
+  );
+}
+
+export async function listReportsApi(
+  accessToken: string,
+  page = 1,
+  limit = 20,
+): Promise<PaginatedReportsDto> {
+  return clientFetch<PaginatedReportsDto>(
+    `/api/reports?page=${page}&limit=${limit}`,
+    {},
+    accessToken,
+  );
+}
+
+export async function getReportApi(
+  accessToken: string,
+  id: string,
+): Promise<ReportDto> {
+  return clientFetch<ReportDto>(`/api/reports/${id}`, {}, accessToken);
+}
+
+export async function createReportApi(
+  accessToken: string,
+  dateFrom: string,
+  dateTo: string,
+): Promise<ReportDto> {
+  return clientFetch<ReportDto>(
+    "/api/reports",
+    { method: "POST", body: JSON.stringify({ dateFrom, dateTo }) },
     accessToken,
   );
 }

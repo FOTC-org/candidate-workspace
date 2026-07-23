@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { AppConfig } from './config/app-config';
 import { DatabaseConfig } from './config/database-config';
+import { AnalyticsConfig } from './config/analytics-config';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
@@ -11,17 +12,21 @@ import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 import { JwtAuthGuard } from './common/guards/jwt-auth.guard';
 import { RolesGuard } from './common/guards/roles.guard';
 import { RequestIdInterceptor } from './common/interceptors/request-id.interceptor';
+import { AnalyticsModule } from './analytics/analytics.module';
+import { ReportsModule } from './reports/reports.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [AppConfig, DatabaseConfig],
+      load: [AppConfig, DatabaseConfig, AnalyticsConfig],
       envFilePath: '.env',
     }),
     PrismaModule,
     AuthModule,
     UsersModule,
+    AnalyticsModule,
+    ReportsModule,
     HealthModule,
   ],
   providers: [

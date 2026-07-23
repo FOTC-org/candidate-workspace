@@ -38,6 +38,7 @@ services:
       PORT: 3001
       LOG_LEVEL: ${LOG_LEVEL:-info}
       CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:3000}
+      MOCK_ANALYTICS_BASE_URL: ${MOCK_ANALYTICS_BASE_URL:-http://mock-analytics:3002}
 
   mock-analytics:
     build:
