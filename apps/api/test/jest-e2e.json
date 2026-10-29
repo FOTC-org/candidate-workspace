@@ -4,8 +4,8 @@
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {
-    "node_modules/@nestjs/jwt/.+\\.js$": [
-      "ts-jest",
+    "node_modules/@nestjs/.+\\.js$": [
+      "<rootDir>/nest-esm-transformer.js",
       {
         "tsconfig": {
           "allowJs": true,
@@ -17,6 +17,6 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "transformIgnorePatterns": [
-    "/node_modules/(?!(\\.pnpm|@nestjs/jwt)/)"
+    "/node_modules/(?!(\\.pnpm|@nestjs)/)"
   ]
 }

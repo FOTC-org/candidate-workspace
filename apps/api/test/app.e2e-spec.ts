@@ -43,6 +43,20 @@ describe('AppController (e2e)', () => {
     });
   });
 
+  describe('unknown route under the global prefix', () => {
+    it('returns the JSON error body with the full request path', async () => {
+      const res = await request(app.getHttpServer())
+        .get('/api/v1/does-not-exist?x=1')
+        .expect(404);
+
+      expect(res.body).toMatchObject({
+        statusCode: 404,
+        errorCode: 'NOT_FOUND',
+        path: '/api/v1/does-not-exist?x=1',
+      });
+    });
+  });
+
   describe('POST /api/v1/auth/login', () => {
     it('returns 400 when body is empty', () => {
       return request(app.getHttpServer())
