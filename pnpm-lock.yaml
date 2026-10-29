@@ -167,8 +167,8 @@ importers:
   apps/web:
     dependencies:
       '@hookform/resolvers':
-        specifier: ^5.4.0
-        version: 5.9.2(@sinclair/typebox@0.34.52)(@standard-schema/spec@1.1.0)(ajv@8.20.0)(class-transformer@0.5.1)(class-validator@0.15.1)(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.7)
+        specifier: ^6.0.0
+        version: 6.0.2(@sinclair/typebox@0.34.52)(@standard-schema/spec@1.1.0)(ajv@8.20.0)(class-transformer@0.5.1)(class-validator@0.15.1)(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.7)
       js-cookie:
         specifier: ^3.0.8
         version: 3.0.8
@@ -747,12 +747,11 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hookform/resolvers@5.9.2':
-    resolution: {integrity: sha512-RtjTnZqsC38s4NKp2XO3fD8IA5uyN4tB7McQ5C6uiMPcV+WWO8F+wVa3e+BXUpH2ScgxghAlwFRMVqjT9WChAQ==}
+  '@hookform/resolvers@6.0.2':
+    resolution: {integrity: sha512-e2dqUOlaGuirKVOd/iZWk/Yg5zeaGw7t0hSc3LzxL3o7eZGwZkTyEbBL8H52m0wRKEsNLWoMGOiXGHbPHTXlEQ==}
     peerDependencies:
       '@sinclair/typebox': '>=0.25.24'
       '@standard-schema/spec': ^1.0.0
-      '@typeschema/main': '>=0.13.7'
       '@vinejs/vine': ^2.0.0 || ^3.0.0 || ^4.0.0
       ajv: ^8.12.0
       ajv-errors: ^3.0.0
@@ -762,7 +761,7 @@ packages:
       class-transformer: '>=0.4.0'
       class-validator: '>=0.12.0'
       computed-types: ^1.0.0
-      effect: ^3.10.3
+      effect: ^4.0.0
       fluentvalidation-ts: ^3.0.0
       fp-ts: ^2.7.0
       io-ts: ^2.0.0
@@ -779,8 +778,6 @@ packages:
       '@sinclair/typebox':
         optional: true
       '@standard-schema/spec':
-        optional: true
-      '@typeschema/main':
         optional: true
       '@vinejs/vine':
         optional: true
@@ -4907,11 +4904,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.8.4:
-    resolution: {integrity: sha512-rUCObTnP32Q08R2uuIrt7r9PlEonuTmtuXYcW6s5kjdlj3xbnwe+21yXptAUYcMAABLkYYTtnmzb3w3EDZfueA==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.8.5:
     resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
     engines: {node: '>=10'}
@@ -6224,7 +6216,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hookform/resolvers@5.9.2(@sinclair/typebox@0.34.52)(@standard-schema/spec@1.1.0)(ajv@8.20.0)(class-transformer@0.5.1)(class-validator@0.15.1)(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.7)':
+  '@hookform/resolvers@6.0.2(@sinclair/typebox@0.34.52)(@standard-schema/spec@1.1.0)(ajv@8.20.0)(class-transformer@0.5.1)(class-validator@0.15.1)(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.7)':
     dependencies:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.91.0(@types/react@19.3.0)(react@19.3.1)
@@ -10888,8 +10880,6 @@ snapshots:
       webpack: 5.106.2
 
   semver@6.3.1: {}
-
-  semver@7.8.4: {}
 
   semver@7.8.5: {}
 
