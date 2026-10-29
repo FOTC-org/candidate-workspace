@@ -27,7 +27,10 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
 
-    const errorResponse = this.buildErrorResponse(exception, request.url);
+    const errorResponse = this.buildErrorResponse(
+      exception,
+      request.originalUrl,
+    );
 
     this.logger.error({
       message: 'Unhandled exception',
