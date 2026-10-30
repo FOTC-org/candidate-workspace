@@ -6,7 +6,7 @@ export interface ProfileCardProps {
 
 export function ProfileCard({ user }: ProfileCardProps): React.JSX.Element {
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-xs">
       <dl className="space-y-3">
         <div className="flex justify-between">
           <dt className="text-sm font-medium text-gray-500">Email</dt>

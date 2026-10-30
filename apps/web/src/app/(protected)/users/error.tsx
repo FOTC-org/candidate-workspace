@@ -15,7 +15,7 @@ export default function UsersError({
       <p className="mb-4 text-sm text-red-600">{error.message}</p>
       <button
         onClick={reset}
-        className="rounded bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+        className="rounded-sm bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
       >
         Try again
       </button>

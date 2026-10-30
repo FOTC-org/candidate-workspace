@@ -40,7 +40,7 @@ export function UsersDataTable({
   }
 
   return (
-    <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+    <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-xs">
       <table className="w-full text-sm">
         <thead className="border-b border-gray-200 bg-gray-50">
           <tr>
@@ -89,7 +89,7 @@ export function UsersDataTable({
                   <button
                     onClick={() => handleDeactivate(user.id)}
                     disabled={loadingId === user.id}
-                    className="rounded bg-red-100 px-2.5 py-1 text-xs font-medium text-red-700 hover:bg-red-200 disabled:opacity-50"
+                    className="rounded-sm bg-red-100 px-2.5 py-1 text-xs font-medium text-red-700 hover:bg-red-200 disabled:opacity-50"
                   >
                     {loadingId === user.id ? "Deactivating..." : "Deactivate"}
                   </button>
@@ -110,14 +110,14 @@ export function UsersDataTable({
             <button
               onClick={() => handlePageChange(page - 1)}
               disabled={page <= 1}
-              className="rounded border border-gray-300 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-50"
+              className="rounded-sm border border-gray-300 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-50"
             >
               Previous
             </button>
             <button
               onClick={() => handlePageChange(page + 1)}
               disabled={page * limit >= total}
-              className="rounded border border-gray-300 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-50"
+              className="rounded-sm border border-gray-300 px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-50"
             >
               Next
             </button>

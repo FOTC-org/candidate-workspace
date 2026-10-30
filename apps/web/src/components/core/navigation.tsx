@@ -24,7 +24,7 @@ export function Navigation(): React.JSX.Element {
   }
 
   return (
-    <nav className="border-b border-gray-200 bg-white shadow-sm">
+    <nav className="border-b border-gray-200 bg-white shadow-xs">
       <div className="container mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <span className="text-lg font-bold text-gray-900">UserHub</span>
         <div className="flex items-center gap-4">
@@ -44,7 +44,7 @@ export function Navigation(): React.JSX.Element {
           )}
           <button
             onClick={handleLogout}
-            className="rounded bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-200"
+            className="rounded-sm bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-200"
           >
             Logout
           </button>
