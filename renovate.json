@@ -2,5 +2,25 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "TypeScript 7 is not supported yet by typescript-eslint, ts-jest, the Nest CLI and Next.js",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    },
+    {
+      "description": "Next.js and ESLint majors depend on each other (eslint-config-next), so they ship together",
+      "matchUpdateTypes": ["major"],
+      "groupName": "next and eslint",
+      "matchPackageNames": ["next", "eslint-config-next", "eslint", "@eslint/js", "@next/**"]
+    },
+    {
+      "description": "A PostgreSQL major needs a data migration of existing volumes",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres"],
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    }
   ]
 }
