@@ -9,7 +9,7 @@ export default function UsersNotFound(): React.JSX.Element {
       </p>
       <Link
         href="/profile"
-        className="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        className="rounded-sm bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
       >
         Back to profile
       </Link>

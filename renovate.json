@@ -16,6 +16,11 @@
       "matchPackageNames": ["next", "eslint-config-next", "eslint", "@eslint/js", "@next/**"]
     },
     {
+      "description": "pnpm 12 rejects lockfile entries younger than minimumReleaseAge (1440 min, pnpm-workspace.yaml), so npm updates wait as long",
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "1 day"
+    },
+    {
       "description": "A PostgreSQL major needs a data migration of existing volumes",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["postgres"],

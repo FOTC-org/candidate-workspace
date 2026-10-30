@@ -1,6 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import type { Express } from 'express';
 import { AppModule } from './app.module';
 import { createWinstonLogger } from './common/logger/winston-logger.factory';
 
@@ -18,7 +19,7 @@ async function bootstrap(): Promise<void> {
     logger: createWinstonLogger(nodeEnv, logLevel),
   });
 
-  app.getHttpAdapter().getInstance().disable('x-powered-by');
+  (app.getHttpAdapter().getInstance() as Express).disable('x-powered-by');
 
   app.enableCors({
     origin: corsAllowedOrigins.split(',').map((o) => o.trim()),

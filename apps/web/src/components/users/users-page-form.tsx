@@ -17,7 +17,7 @@ export function UsersPageForm({
 
   if (data.items.length === 0) {
     return (
-      <div className="rounded-lg border border-gray-200 bg-white p-12 text-center shadow-sm">
+      <div className="rounded-lg border border-gray-200 bg-white p-12 text-center shadow-xs">
         <p className="text-gray-500">No users found.</p>
       </div>
     );

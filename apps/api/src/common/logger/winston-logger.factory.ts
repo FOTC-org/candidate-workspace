@@ -15,7 +15,7 @@ export function createWinstonLogger(nodeEnv: string, logLevel: string) {
         winston.format.ms(),
         winston.format.colorize({ all: true }),
         winston.format.printf(({ timestamp, level, message, context, ms }) => {
-          return `[${timestamp}] ${level} [${context ?? 'App'}] ${String(message)} ${ms}`;
+          return `[${timestamp as string}] ${level} [${(context as string | undefined) ?? 'App'}] ${String(message)} ${ms as string}`;
         }),
       );
 

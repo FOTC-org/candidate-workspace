@@ -27,7 +27,7 @@ export class UsersService {
     ]);
 
     return {
-      items: items.map(this.mapToOutput),
+      items: items.map((user) => this.mapToOutput(user)),
       total,
       page,
       limit,

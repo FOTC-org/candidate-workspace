@@ -70,7 +70,7 @@ export function RegisterForm(): React.JSX.Element {
           id="email"
           type="email"
           {...register("email")}
-          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-xs focus:border-blue-500 focus:outline-hidden focus:ring-1 focus:ring-blue-500"
         />
         {errors.email && (
           <p className="mt-1 text-xs text-red-600">{errors.email.message}</p>
@@ -88,7 +88,7 @@ export function RegisterForm(): React.JSX.Element {
           id="password"
           type="password"
           {...register("password")}
-          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-xs focus:border-blue-500 focus:outline-hidden focus:ring-1 focus:ring-blue-500"
         />
         {errors.password && (
           <p className="mt-1 text-xs text-red-600">{errors.password.message}</p>
@@ -106,7 +106,7 @@ export function RegisterForm(): React.JSX.Element {
           id="confirmPassword"
           type="password"
           {...register("confirmPassword")}
-          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 shadow-xs focus:border-blue-500 focus:outline-hidden focus:ring-1 focus:ring-blue-500"
         />
         {errors.confirmPassword && (
           <p className="mt-1 text-xs text-red-600">
