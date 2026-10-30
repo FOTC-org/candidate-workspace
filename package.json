@@ -1,7 +1,7 @@
 {
     "name": "userhub",
     "private": true,
-    "packageManager": "pnpm@9.15.9",
+    "packageManager": "pnpm@12.16.1",
     "scripts": {
         "dev:api": "pnpm --filter api start:dev",
         "dev:web": "pnpm --filter web dev",
