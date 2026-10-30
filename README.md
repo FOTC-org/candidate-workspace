@@ -28,6 +28,10 @@ Services:
 - Web: http://localhost:3000
 - Mock Analytics: http://localhost:3002
 
+### Upgrading an existing local database (PostgreSQL 16 -> 18)
+
+The `db` service runs PostgreSQL 18, which stores data under `/var/lib/postgresql/18/docker` (the volume is mounted at `/var/lib/postgresql`). An existing `postgres_userhub` volume from PostgreSQL 16 will not start (the container exits with an "old databases" error). Either reset it with `docker compose down -v` (deletes local data, then re-run migrations and seed), or keep the data by taking `pg_dump` from the old container before switching images and restoring it with `psql` into the new one.
+
 ## Test accounts (after seed)
 
 | Email                | Password     | Role               |
