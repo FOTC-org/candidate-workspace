@@ -11,6 +11,6 @@
         "lint": "pnpm -r lint"
     },
     "devDependencies": {
-        "typescript": "^5.3.3"
+        "typescript": "^6.0.0"
     }
 }
