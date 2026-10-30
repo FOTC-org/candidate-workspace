@@ -3,6 +3,29 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Tailwind 3 values of the shades in use, for visual parity with v3. */
+  --color-blue-100: #dbeafe;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+  --color-green-100: #dcfce7;
+  --color-green-800: #166534;
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
 }
 
 /* Tailwind 4 compat: v3 default border color (v4 defaults to currentcolor). */
