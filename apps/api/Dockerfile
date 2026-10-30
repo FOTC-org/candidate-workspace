@@ -2,7 +2,7 @@ FROM node:20-slim AS base
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends openssl \
     && rm -rf /var/lib/apt/lists/* \
-    && npm install -g pnpm@9.15.4
+    && npm install -g pnpm@12.16.1
 
 FROM base AS deps
 WORKDIR /app
