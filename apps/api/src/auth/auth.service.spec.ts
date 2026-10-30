@@ -29,7 +29,6 @@ describe('AuthService', () => {
   let service: AuthService;
   let userService: jest.Mocked<UserService>;
   let jwtService: jest.Mocked<JwtService>;
-  let configService: jest.Mocked<ConfigService>;
 
   beforeEach(async () => {
     const mockUserService: jest.Mocked<Partial<UserService>> = {
@@ -65,7 +64,6 @@ describe('AuthService', () => {
     service = module.get<AuthService>(AuthService);
     userService = module.get(UserService);
     jwtService = module.get(JwtService);
-    configService = module.get(ConfigService);
   });
 
   describe('register', () => {

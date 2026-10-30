@@ -39,7 +39,9 @@ describe('AppController (e2e)', () => {
         status: 'ok',
         database: 'ok',
       });
-      expect(typeof res.body.timestamp).toBe('string');
+      expect(typeof (res.body as { timestamp: unknown }).timestamp).toBe(
+        'string',
+      );
     });
   });
 
